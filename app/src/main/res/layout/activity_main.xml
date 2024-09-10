@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <!-- 第二部分 (230px高度) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="200"
+            android:orientation="horizontal"
+            android:scaleType="fitCenter"
+            android:background="@drawable/logo"
+
+            >
+            <!-- 內容放置區 -->
+        </LinearLayout>
+
+        <!-- 第三部分 (355px高度) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1095"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!-- 內容放置區 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <!-- 內容放置區 -->
+                    <TextView
+                        android:id="@+id/voltage_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/voltage"
+                        android:text="N/A"
+                        android:paddingTop="20dp"
+                        android:textColor="@color/Display_text"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    >
+                    <!-- 內容放置區 -->
+                    <TextView
+                        android:id="@+id/current_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/current"
+                        android:text="N/A"
+                        android:paddingTop="20dp"
+                        android:textColor="@color/Display_text"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <!-- 內容放置區 -->
+                    <TextView
+                        android:id="@+id/frequency_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/frequency"
+                        android:text="N/A"
+                        android:paddingTop="20dp"
+                        android:textColor="@color/Display_text"
+                        android:textSize="30sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!-- 內容放置區 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="365"
+                    android:orientation="vertical">
+
+
+
+                    <ImageButton
+                        android:id="@+id/ble_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/ripple_drawable"
+                        app:srcCompat="@drawable/csan" />
+
+                    <!-- 內容放置區 -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="710"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <!-- 內容放置區 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/circularProgressBar"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_margin="10dp"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="#3f51b5"
+                            app:cpb_progressbar_color_direction="left_to_right"
+                            app:cpb_progressbar_width="10dp"
+                            app:cpb_round_border="false" />
+
+<!--                        displayProgressBar-->
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/displayProgressBar"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_margin="10dp"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="#3f51b5"
+                            app:cpb_progressbar_color_direction="left_to_right"
+                            app:cpb_progressbar_width="10dp"
+                            app:cpb_round_border="false" />
+
+                        <TextView
+                            android:id="@+id/power_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/power"
+                            android:gravity="center"
+                            android:scaleType="fitCenter"
+                            android:text="N/A"
+                            android:paddingTop="0dp"
+                            android:textColor="@color/Display_text"
+                            android:textSize="30sp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--        &lt;!&ndash; 左半部分 (寬度: 1:2比例) &ndash;&gt;-->
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:orientation="vertical">-->
+            <!--            &lt;!&ndash; 內容放置區 &ndash;&gt;-->
+            <!--        </LinearLayout>-->
+
+            <!--        &lt;!&ndash; 右半部分 (寬度: 1:2比例) &ndash;&gt;-->
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:orientation="vertical">-->
+            <!--            &lt;!&ndash; 內容放置區 &ndash;&gt;-->
+            <!--        </LinearLayout>-->
+            <!--    </LinearLayout>-->
+
+            <!--    &lt;!&ndash; 第四部分 (355px高度) &ndash;&gt;-->
+            <!--    <LinearLayout-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="0dp"-->
+            <!--        android:layout_weight="355"-->
+            <!--        android:orientation="horizontal">-->
+
+            <!--        &lt;!&ndash; 左半部分 (寬度: 1:2比例) &ndash;&gt;-->
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:orientation="vertical">-->
+            <!--            &lt;!&ndash; 內容放置區 &ndash;&gt;-->
+            <!--        </LinearLayout>-->
+
+            <!--        &lt;!&ndash; 右半部分 (寬度: 1:2比例) &ndash;&gt;-->
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:orientation="vertical">-->
+            <!--            &lt;!&ndash; 內容放置區 &ndash;&gt;-->
+            <!--        </LinearLayout>-->
+        </LinearLayout>
+
+        <!-- 第五部分 (710px高度) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="720"
+            android:background="@drawable/waveform"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <!-- 內容放置區 -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!-- 第六部分 (260px高度) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="260"
+            android:orientation="horizontal">
+
+            <!-- 左中右各佔1/3寬度 (每個佔1/3) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <!-- Voltage按鈕 -->
+                <ImageButton
+                    android:id="@+id/voltage_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_drawable"
+                    app:srcCompat="@drawable/vrms_vpng"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:text="@string/vrms" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <!-- Current按鈕 -->
+                <ImageButton
+                    android:id="@+id/current_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_drawable"
+                    app:srcCompat="@drawable/irms"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <!-- Power按鈕 -->
+                <ImageButton
+                    android:id="@+id/power_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_drawable"
+                    app:srcCompat="@drawable/power_w"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/main"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    -->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:background="@color/white"-->
+    <!--        tools:ignore="UselessLeaf">-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="vertical"-->
+    <!--            tools:ignore="UselessParent">-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_weight="6">-->
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/ble_button"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_alignParentStart="true"-->
+    <!--                    android:layout_alignParentBottom="true"-->
+    <!--                    android:layout_marginStart="25dp"-->
+    <!--                    android:layout_marginBottom="25dp"-->
+    <!--                    android:text="@string/ble_Start" />-->
+    <!--            </RelativeLayout>-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_weight="4">-->
+
+    <!--                <com.github.mikephil.charting.charts.LineChart-->
+    <!--                    android:id="@+id/lineChart"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent" />-->
+
+    <!--            </RelativeLayout>-->
+
+    <!--            &lt;!&ndash; New LinearLayout for three equal buttons at the bottom &ndash;&gt;-->
+    <!--            <LinearLayout-->
+    <!--                style="?android:attr/buttonBarStyle"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:gravity="bottom">-->
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/voltage_button"-->
+    <!--                    style="?android:attr/buttonBarButtonStyle"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:text="@string/vrms" />-->
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/current_button"-->
+    <!--                    style="?android:attr/buttonBarButtonStyle"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:text="@string/irms" />-->
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/power_button"-->
+    <!--                    style="?android:attr/buttonBarButtonStyle"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:text="@string/power" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </RelativeLayout>-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartPowerMeasurement</string>
+    <string name="ble_Start">BLE Scan</string>
+    <string name="power">Power(W)</string>
+    <string name="irms">Irms(A)</string>
+    <string name="vrms">Vrms(V)</string>
+</resources>
